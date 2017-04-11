@@ -80,6 +80,15 @@
 #elif CONTIKI_TARGET_Z1
 /* add the cmd_handler_cc2420 */
 #define CMD_CONF_HANDLERS slip_radio_cmd_handler,cmd_handler_cc2420
+#elif CONTIKI_TARGET_CC2530DK
+
+#undef QUEUEBUF_CONF_NUM
+#define QUEUEBUF_CONF_NUM          4
+
+#define MODELS_CONF_CC2531_USB_STICK 1
+
+/* add the cmd_handler_cc2531 */
+#define CMD_CONF_HANDLERS slip_radio_cmd_handler,cmd_handler_cc2531
 #elif CONTIKI_TARGET_CC2538DK
 /* add the cmd_handler_cc2538 */
 #define CMD_CONF_HANDLERS slip_radio_cmd_handler,cmd_handler_cc2538

@@ -30,6 +30,9 @@ endif
 ifeq ($(TARGET),exp5438)
   PROJECT_SOURCEFILES += slip-radio-cc2420.c
 endif
+ifeq ($(TARGET),cc2530dk)
+  PROJECT_SOURCEFILES += slip-radio-cc2531.c
+endif
 ifeq ($(TARGET),cc2538dk)
   PROJECT_SOURCEFILES += slip-radio-cc2538.c
 endif
